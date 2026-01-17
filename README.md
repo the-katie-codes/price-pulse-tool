@@ -1,6 +1,6 @@
-# PriceInsight Data Analysis
+# PricePulse Data Analysis
 
-**PriceInsight** is a small Python project that analyzes product price changes from a CSV dataset.  
+**PricePulse** is a small Python project that analyzes product price changes from a CSV dataset.  
 It calculates absolute and percentage changes in price, identifies the smallest and largest price changes, and visualizes the results in a bar chart.  
 
 This project is ideal for practicing basic data cleaning, manipulation, and visualization using **Pandas**, **NumPy**, and **Matplotlib**.  
