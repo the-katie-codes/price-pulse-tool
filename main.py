@@ -48,4 +48,30 @@ max_price = round(data["price_change"].max(skipna=True), 2)
 print(f"Smallest price change: {min_price}")
 print(f"Biggest price change: {max_price}")
 
+# -------------------------
+# Step 5: Save Cleaned Data
+# -------------------------
 data.to_csv("data/pricepulse_clean_data.csv", index=False)
+
+# -------------------------
+# Step 6: Visualization
+# -------------------------
+
+# Prepare data for chart
+chart_data = data.dropna(subset=["price_change"])
+
+# Set x and y axis
+x_axis = chart_data["product"]
+y_axis = chart_data["price_change"]
+
+# Create bar chart
+plt.bar(x_axis, y_axis)
+
+# Add labels and title
+plt.xlabel("Product name")
+plt.ylabel("Price Change (€)")
+plt.title("Price Change per Product")
+plt.xticks(rotation=90)
+
+# Display the chart
+plt.show()
