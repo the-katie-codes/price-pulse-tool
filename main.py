@@ -14,3 +14,9 @@ import matplotlib.pyplot as plt
 # Step 1: Load Data
 # -------------------------
 data = pd.read_csv('data/pricepulse_sample_data.csv')
+
+# -------------------------
+# Step 2: Clean & Convert Prices
+# -------------------------
+data["old_price"] = pd.to_numeric(data["old_price"], errors="coerce")
+data["new_price"] = pd.to_numeric(data["new_price"], errors="coerce")
