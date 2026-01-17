@@ -37,3 +37,15 @@ data["percent_change"] = np.where(
 
 # Calculate mean price
 data["mean_price"] = round((data["old_price"] + data["new_price"]) / 2, 2)
+
+# -------------------------
+# Step 4: Summary Stats
+# -------------------------
+
+min_price = round(data["price_change"].min(skipna=True), 2)
+max_price = round(data["price_change"].max(skipna=True), 2)
+
+print(f"Smallest price change: {min_price}")
+print(f"Biggest price change: {max_price}")
+
+data.to_csv("data/pricepulse_clean_data.csv", index=False)
